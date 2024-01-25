@@ -1,5 +1,3 @@
 #!/bin/bash
 docker build -t myimage .
-docker container stop mycontainer
-docker container rm -rf mycontainer
-docker run -d --name mycontainer myimage
+docker run -itd --name mycontainer1 -p 8086:8080 myimage
